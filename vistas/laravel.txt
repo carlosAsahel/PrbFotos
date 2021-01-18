@@ -1,0 +1,69 @@
+archivo .env:
+el inicio la base de datos puerto base nombre base
+contraseña base(datos de conexin a la base de datos)
+
+envio de correos smtp, tiene host del mail,puerto,
+correo,contraseña,y encriptacion ssl
+
+carpeta app:
+dentro carpeta http dentro controlles dentro auth:
+en auth estan archivos de autenticacion de usuario,
+
+dentro http en controllers:
+los controlles son(metodos) los que permite la comunicacion 
+con la base de datos y redireccionan la pagina
+con resultados de consultas
+
+dentro de http dentro de middleware:
+
+apartado de seguridad para el acceso que tienen los usuarios
+en caso de no iniciar sesion regresa al login 
+hay un archivo para cada tipo de usuario
+
+dentro de http el archivo kernel:
+tiene los tipos de usuario con sus midelware(llama a los 
+middelware para comprobar)
+
+app, providers: no se tocan 
+porque son de la estructura de laravel
+
+dentro de app:
+estan los modelos de la base de datos, nombres y filas de las 
+consultas a la base de datos(un archivo por tabla) 
+los modelos llaman a los archivos php que hacen las consultas
+y les pasan parametros de las consultas 
+
+en raiz, bootstrap:
+
+raiz, database, factories:
+archvio de encriptacion de contraseña*
+
+raiz ,database, migrations:
+archivos para crear tablas en sql
+
+raiz , database , seeds:
+tablas catalogo, categorias que maneja el proyecto 
+
+crea registros automaticamente en la base de datos.
+
+
+raiz, public:
+archivos de bootstrap 
+
+raiz resourses views;
+vistas para el usuario
+
+views template;
+las plantillas de que se repiten como el header o footer
+
+raiz routes :
+archivo web.php se encarga del redireccionamiento de todas las 
+paginas llamandolas y recuperando valores en caso
+de ser necesario.
+
+raiz storage app:
+se crean las carpetas para guardar la multimedia
+
+
+
+
