@@ -1,0 +1,57 @@
+----------------------NTP-------------------------
+-Configurar el Servidor NTP con la hora actual-
+enable
+config terminal
+ntp server 172.23.0.6
+ntp update-calendar
+
+//adelantar al reloj de pk
+do show clock
+
+clock timezone UTC-6 -6
+exit
+show ntp status
+
+---------------------SYSLOG-----------------------
+conf terminal
+logging 172.23.0.7
+//** Syslog usa el puerto 514 **//
+int loop 0
+no shut
+no int loop 0
+
+service timestamps log datetime msec
+
+
+
+---------------------SNMP-------------------------
+snmp-server community public ro
+
+//** En el servidor NTP: **//
+
+172.23.0.1
+161
+public
+private
+
+v2
+
+->.sysName (get)>go
+->.sysUpTime (get)>go
+->.ifDescr (get)>go
+
+snmp-server community private rw
+
+//** En el servidor NTP: **//
+
+172.23.0.1
+161
+public
+private
+v2
+
+->.sysName (set)
+OctetString
+nuevoNombre
+ok>go
+--------------------------------------------------
