@@ -1,0 +1,9 @@
+copie la topologia que estaba en clase y use los mismos dispositivos
+puse el cable de cobre para las conexiones entre fast y gigabit
+porque es el que siempre e usado para el resto de conexiones que no 
+son serial,para los routers utilice el cable serial, entre routers no 
+se que cable se deberia usar, pero use el de cobre por que se 
+conectaba con puerto serial.
+
+atuilice la ip 192.168.0.0 porque es la que se usa comunmente en 
+los dispositivos que se conectar a internet.
